@@ -1,0 +1,270 @@
+:root {
+  --bg-1: #111827;
+  --bg-2: #1f2937;
+  --card: #ffffff;
+  --text-1: #111827;
+  --text-2: #4b5563;
+  --accent: #2563eb;
+  --accent-2: #7c3aed;
+  --skin: #ffe0c2;
+  --hair: #1f2937;
+  --shirt: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+  color: var(--text-1);
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+  display: grid;
+  place-items: center;
+}
+
+.card-wrap {
+  width: min(92vw, 760px);
+}
+
+.card {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+.avatar {
+  position: relative;
+  width: 190px;
+  height: 220px;
+  margin: 0 auto;
+}
+
+.glasses {
+  position: absolute;
+  top: 90px;
+  left: 44px;
+  width: 102px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lens {
+  width: 37px;
+  height: 24px;
+  border: 3px solid #111827;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.bridge {
+  width: 18px;
+  height: 3px;
+  background: #111827;
+  border-radius: 99px;
+}
+
+.hair {
+  position: absolute;
+  top: 14px;
+  left: 25px;
+  width: 140px;
+  height: 120px;
+  background: linear-gradient(135deg, #0f172a, #1f2937);
+  border-radius: 80px 80px 40px 48px;
+  z-index: 1;
+}
+
+.face {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 110px;
+  height: 130px;
+  background: var(--skin);
+  border-radius: 52px 52px 56px 56px;
+  z-index: 2;
+}
+
+.eye {
+  position: absolute;
+  top: 46px;
+  width: 11px;
+  height: 11px;
+  background: #111;
+  border-radius: 50%;
+}
+
+.eye.left {
+  left: 30px;
+}
+
+.eye.right {
+  right: 30px;
+}
+
+.mouth {
+  position: absolute;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 8px;
+  border-bottom: 3px solid #7f1d1d;
+  border-radius: 0 0 12px 12px;
+}
+
+.neck {
+  position: absolute;
+  top: 157px;
+  left: 76px;
+  width: 38px;
+  height: 26px;
+  background: #ffd3af;
+  border-radius: 0 0 10px 10px;
+  z-index: 1;
+}
+
+.body {
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  width: 130px;
+  height: 76px;
+  background: var(--shirt);
+  border-radius: 22px 22px 12px 12px;
+}
+
+.jacket {
+  position: absolute;
+  left: 35px;
+  bottom: 6px;
+  width: 120px;
+  height: 64px;
+  background: linear-gradient(160deg, #374151, #111827);
+  border-radius: 18px 18px 10px 10px;
+  z-index: 2;
+}
+
+.label {
+  margin: 2px 0 10px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+#job {
+  margin: 6px 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#tagline {
+  margin: 0 0 18px;
+  color: var(--text-2);
+  font-size: 15px;
+}
+
+.contact-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-list li {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.key {
+  min-width: 54px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+a {
+  color: var(--text-1);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+}
+
+.link-buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.linkedin-btn:hover {
+  color: #fff;
+  filter: brightness(1.05);
+}
+
+.youtube-btn {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.youtube-btn:hover {
+  color: #fff;
+  filter: brightness(1.05);
+}
+
+@media (max-width: 640px) {
+  .card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-list li {
+    justify-content: center;
+  }
+
+  .key {
+    min-width: auto;
+  }
+}
