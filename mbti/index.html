@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTI Quick Check</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="header">
+      <h1 class="title">MBTI 10문항 Quick Check</h1>
+      <p class="subtitle">간단한 선택형 질문으로 현재 성향을 가볍게 확인해보세요. (정식 심리검사를 대체하지는 않아요)</p>
+    </section>
+
+    <section class="progress-wrap">
+      <div class="progress-top">
+        <span id="stepText">1 / 10</span>
+        <span id="percentText">10%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" id="progressBar"></div>
+      </div>
+    </section>
+
+    <section class="question-card" id="quizCard">
+      <span class="question-badge" id="axisBadge">E vs I</span>
+      <p class="question-text" id="questionText"></p>
+      <div class="options">
+        <button class="option-btn" id="optionA"></button>
+        <button class="option-btn" id="optionB"></button>
+      </div>
+    </section>
+
+    <section class="result" id="resultCard">
+      <h2 class="type" id="mbtiType"></h2>
+      <h3 class="type-title" id="mbtiTitle"></h3>
+      <p class="desc" id="mbtiDesc"></p>
+      <div class="stats" id="mbtiStats"></div>
+      <button class="restart" id="restartBtn">다시 검사하기</button>
+    </section>
+
+    <section class="footer">
+      <button class="btn btn-secondary" id="prevBtn">이전 문항</button>
+      <button class="btn btn-primary" id="nextBtn" disabled>다음 문항</button>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
