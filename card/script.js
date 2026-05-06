@@ -1,12 +1,9 @@
 const profile = {
-  name: "김태헌",
-  job: "SideOnAI 대표",
-  tagline: "AI와 함께 놀고 있습니다. 같이 노실 분?",
-  email: "th@sideonai.com",
-  phoneDisplay: "010-1111-1111",
-  phoneRaw: "01011111111",
-  linkedin: "https://www.linkedin.com/",
-  youtube: "https://www.youtube.com/@ai-study",
+  name: "마루설아",
+  job: "개발자 꿈나무 블로그",
+  tagline: "안녕하세요!",
+  email: "test@test.com",
+  blog: "https://maruseol-a.tistory.com/",
 };
 
 function applyProfile(data) {
@@ -25,21 +22,11 @@ function applyProfile(data) {
     email.href = `mailto:${data.email}`;
   }
 
-  const phone = document.getElementById("phone");
-  if (phone) {
-    phone.textContent = data.phoneDisplay;
-    phone.href = `tel:${data.phoneRaw}`;
+  const blog = document.getElementById("blog");
+  if (blog) {
+    blog.href = data.blog;
   }
 
-  const linkedin = document.getElementById("linkedin");
-  if (linkedin) {
-    linkedin.href = data.linkedin;
-  }
-
-  const youtube = document.getElementById("youtube");
-  if (youtube) {
-    youtube.href = data.youtube;
-  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {

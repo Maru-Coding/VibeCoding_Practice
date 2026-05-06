@@ -46,61 +46,45 @@ body {
   margin: 0 auto;
 }
 
-.glasses {
+.cat-ear {
   position: absolute;
-  top: 90px;
-  left: 44px;
-  width: 102px;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.lens {
-  width: 37px;
-  height: 24px;
-  border: 3px solid #111827;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-.bridge {
-  width: 18px;
-  height: 3px;
-  background: #111827;
-  border-radius: 99px;
-}
-
-.hair {
-  position: absolute;
-  top: 14px;
-  left: 25px;
-  width: 140px;
-  height: 120px;
-  background: linear-gradient(135deg, #0f172a, #1f2937);
-  border-radius: 80px 80px 40px 48px;
+  top: 26px;
+  width: 52px;
+  height: 52px;
+  background: #f4c6a6;
+  border-radius: 8px 40px 8px 40px;
+  transform: rotate(45deg);
   z-index: 1;
 }
 
-.face {
+.cat-ear.left {
+  left: 28px;
+}
+
+.cat-ear.right {
+  right: 28px;
+  transform: rotate(135deg);
+}
+
+.cat-face {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 42px;
+  left: 42px;
   width: 110px;
-  height: 130px;
-  background: var(--skin);
-  border-radius: 52px 52px 56px 56px;
+  height: 112px;
+  background: #f8d7bf;
+  border-radius: 48% 48% 42% 42%;
+  border: 2px solid #e9b28e;
   z-index: 2;
 }
 
 .eye {
   position: absolute;
   top: 46px;
-  width: 11px;
-  height: 11px;
+  width: 10px;
+  height: 14px;
   background: #111;
-  border-radius: 50%;
+  border-radius: 50% / 60%;
 }
 
 .eye.left {
@@ -111,47 +95,86 @@ body {
   right: 30px;
 }
 
-.mouth {
+.cat-nose {
   position: absolute;
-  bottom: 34px;
+  top: 64px;
   left: 50%;
   transform: translateX(-50%);
-  width: 20px;
+  width: 12px;
   height: 8px;
-  border-bottom: 3px solid #7f1d1d;
-  border-radius: 0 0 12px 12px;
+  background: #f472b6;
+  border-radius: 50% 50% 60% 60%;
 }
 
-.neck {
+.cat-mouth {
   position: absolute;
-  top: 157px;
-  left: 76px;
-  width: 38px;
-  height: 26px;
-  background: #ffd3af;
-  border-radius: 0 0 10px 10px;
-  z-index: 1;
+  top: 74px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 12px;
+  border-bottom: 2px solid #7f1d1d;
+  border-radius: 0 0 50% 50%;
 }
 
-.body {
+.whisker {
   position: absolute;
-  left: 30px;
-  bottom: 0;
-  width: 130px;
-  height: 76px;
-  background: var(--shirt);
-  border-radius: 22px 22px 12px 12px;
+  top: 72px;
+  width: 30px;
+  height: 2px;
+  background: #374151;
+  border-radius: 99px;
 }
 
-.jacket {
+.whisker.left {
+  left: -18px;
+}
+
+.whisker.right {
+  right: -18px;
+}
+
+.whisker.top.left,
+.whisker.bottom.right {
+  transform: rotate(14deg);
+}
+
+.whisker.bottom.left,
+.whisker.top.right {
+  transform: rotate(-14deg);
+}
+
+.whisker.top {
+  margin-top: -8px;
+}
+
+.whisker.bottom {
+  margin-top: 8px;
+}
+
+.cat-body {
   position: absolute;
-  left: 35px;
-  bottom: 6px;
-  width: 120px;
-  height: 64px;
-  background: linear-gradient(160deg, #374151, #111827);
-  border-radius: 18px 18px 10px 10px;
+  left: 44px;
+  bottom: 12px;
+  width: 102px;
+  height: 74px;
+  background: linear-gradient(160deg, #f4c6a6, #e9b28e);
+  border-radius: 52px 52px 28px 28px;
+  border: 2px solid #e1a77f;
   z-index: 2;
+}
+
+.cat-tail {
+  position: absolute;
+  right: 14px;
+  bottom: 36px;
+  width: 44px;
+  height: 44px;
+  border: 8px solid #e9b28e;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 999px 0 0;
+  transform: rotate(12deg);
 }
 
 .label {
@@ -212,46 +235,6 @@ a {
 
 a:hover {
   color: var(--accent);
-}
-
-.linkedin-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  color: #fff;
-}
-
-.link-buttons {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-}
-
-.social-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 12px;
-  border-radius: 999px;
-  color: #fff;
-}
-
-.linkedin-btn:hover {
-  color: #fff;
-  filter: brightness(1.05);
-}
-
-.youtube-btn {
-  background: linear-gradient(90deg, #ef4444, #dc2626);
-}
-
-.youtube-btn:hover {
-  color: #fff;
-  filter: brightness(1.05);
 }
 
 @media (max-width: 640px) {
